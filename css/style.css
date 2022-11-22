@@ -1,37 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap");
 
-*,
-*::before,
-*::after {
+*{
   box-sizing: border-box;
+
 }
+ 
 
 body {
   font-family: "Roboto", sans-serif !important;
   color: #212121;
   background: #ffffff;  
+  
 }
 
 .container {
-  width: 1600px;
-  justify-content: center;
+  width: auto;
+  
 }
 
 .section{
+  display: flex;
+  justify-content: center;
   margin: 0px;
-  padding: 94px 215px 94px 215px;
-  text-align: center;
+  padding: 94px 0px 94px 0px;
+  text-align: left;
 }
 .main {
   display: flex;
   font-family: "Roboto", sans-serif;
-  width: 1600px;
+  width: auto;
   border-bottom: 1px solid #ececec;
 }
 
 .main_contact {
   padding: 32px 90px 32px 100px;
   display: flex;
+  gap:10px;
 }
 
 .imagenes {
@@ -45,9 +49,11 @@ body {
 ul {
   list-style-type: none;
   display: flex;
-  --padding: 16px 165px 16px 53px;
   margin-top: 32px;
+  gap: 30px;
+  
 }
+
 
 .title {
   font-family: "Raleway";
@@ -57,7 +63,7 @@ ul {
   line-height: 31px;
   letter-spacing: 0.03em;
   color: #2196f3;
-  padding: 24px 40px 6px 215px;
+  padding: 24px 40px 6px 105px;
   border-bottom: 1px;
 }
 
@@ -77,11 +83,13 @@ button {
   letter-spacing: 0.03em;
   color: #212121;
   cursor: pointer;
+ 
 }
 
 button:hover {
   background: #2196f3;
   color: #ffffff;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3)
 }
 
 button:focus {
@@ -112,7 +120,7 @@ button:focus {
   line-height: 16px;
   letter-spacing: 0.02em;
   color: #757575;
-  padding: 0px 20px;
+  padding: 0px 20px 0px 0px;
 }
 .contact:hover {
   color: #2196f3;
@@ -135,7 +143,7 @@ button:focus {
 
 .sub_title {
   margin: 0px;
-  padding: 0px 0px 30px 0px;
+  --padding: 0px 0px 30px 0px;
   font-style: normal;
   font-weight: 400;
   font-size: 16;
@@ -146,11 +154,15 @@ button:focus {
 
 .main_title {
   text-align: center;
-  width: 1600px;
+  width: auto;
   height: 600px;
   left: -4px;
   top: 80px;
-  background: #2f303a;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5) ),
+    url('../images/p.jpg');  
+  object-fit: cover;
 }
 
 .btn_service {
@@ -158,15 +170,17 @@ button:focus {
 }
 
 h1 {
-  margin: 0px;
-  padding: 200px 452px 30px;
+  padding: 200px 300px 30px ;
+  margin: 0px ;
+ display: flex;
   font-weight: 900;
   font-size: 44px;
   line-height: 60px;
-  text-align: center;
+ justify-content: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+
 }
 
 .articule {
@@ -202,9 +216,11 @@ h2 {
 }
 
 .team {
+  --display: flex;
+  justify-content: center;
   background: #f5f4fa;
   margin: 0px;
-  padding: 50px 215px 94px;
+  padding: 50px 0px 94px;
 }
 
 .team_img {
@@ -215,10 +231,20 @@ figure {
   margin: 0px;
   background: #ffffff;
   border: 1px solid #eeeeee;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.container .img_filtro .img_portafolio .img_border_port figure{
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+.container .img_filtro .img_portafolio .img_border_port figure:hover{
+  box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.3);
 }
 
 figcaption {
   text-align: center;
+ 
 }
 
 .footer {
@@ -227,10 +253,7 @@ figcaption {
   display: flex;
 }
 
-.footer_index {
-  height: 252px;
-  background: #2f303a;  
-}
+
 
 .p_address {
   margin: 0px;
@@ -254,12 +277,14 @@ figcaption {
 
 .btn_filtro {
   text-align: center;
-  padding: 80px 440px 0px 495px;
+  padding: 80px 0px 0px 0px;
 }
 
 .img_portafolio {
+  display: flex;
+  justify-content: center;
   margin: 0px;
-  padding: 0px 215px 0px 215px;
+  --padding: 0px 215px 0px 0px;
 }
 
 .img_border_port {
@@ -267,9 +292,40 @@ figcaption {
   margin-bottom: 30px;
 }
 
-.ico {
+.icon_find {
+  display: block;
+  justify-content: center;
   padding: 75px 0px 0px 70px;
+
 }
+
+.container .footer .icon_find ul{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0%;
+}
+
+.container .footer .icon_find ul li{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 40px;
+  width: 44px;
+  height: 44px;
+  
+}
+
+.container .footer .icon_find ul li:hover{
+  background: #2196F3;
+}
+
+.container .footer .icon_find ul li svg{
+  fill: #F5F4FA;
+  margin-top: 13px;
+}
+
+
 
 .h4_hear {
   font-weight: 700;
@@ -283,3 +339,93 @@ figcaption {
 .img_filtro{
   padding: 50px 0px 80px 0px;
 }
+
+.icon{
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.features{
+  display: flex; 
+  justify-content: center;
+  background: #F5F4FA;
+  border-radius: 4px;
+  padding: 25px;
+  
+}
+
+.icon:hover {
+  fill: #2196F3;
+}
+
+.container .team .team_img ul li{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 40px;
+  width: 44px;
+  height: 44px;
+  
+} 
+  
+.container .team .team_img ul{
+  display: flex;
+  gap: 10px;
+  padding: 0px 0px 30px 30px;
+
+}
+
+.container .team .team_img ul li:hover{
+  background: #2196f3;
+}
+
+.container .team .team_img ul li svg {
+  fill:#AFB1B8;
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  margin-top:12px ;
+}
+
+.container .team .team_img ul li svg:hover{
+  fill: #FFFFFF;
+}
+
+.regular{
+  display: block;
+  justify-content: center;
+padding: 51px 0px 151px 0px;
+}
+
+
+
+.container .regular ul li{
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid #AFB1B8;
+  width: 170px;
+  height: 81px;
+}
+
+.container .regular ul li:hover{
+  border: 1px solid #2196F3;
+}
+
+.container .regular ul{
+  display: flex;
+  justify-content: center;
+
+}
+
+.container .regular ul li svg{
+  margin-top: 20px;
+  fill:#AFB1B8;
+}
+
+.container .regular ul li svg:hover{
+  fill: #2196F3;
+}
+
